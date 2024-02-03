@@ -1,0 +1,17 @@
+extends layoutperfil
+
+block content
+  .main.container.clearfix
+    .row
+      .col-md-8.col-md-offset-2
+        h1.display-4
+          img.avatar.img-circle.hidden-xs-down(src='/images/avatar.png', alt='avatar')
+          | #{name}
+        h2.favorite-book Sistema Biométrico 
+        | #{favorite}
+        form(method='GET' action='/perfil/configEmpleados')
+          button.btn.btn-primary(type='submit') Configuración de empleados
+        form(method='GET' action='/perfil/listaEmpleados')
+          button.btn.btn-primary(type='submit') Lista de empleados
+        form(method='GET' action='/perfil/informaciones/updates')
+          button.btn.btn-primary(type='submit') Updates

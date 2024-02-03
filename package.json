@@ -1,0 +1,31 @@
+{
+  "name": "servernode",
+  "version": "0.1.0",
+  "description": "Servidor NodeJs for IoT, register datos with Mongo and proccesing datas",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Cristian Josue Jimenez Tapia",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "excel4node": "^1.7.2",
+    "exceljs": "^4.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.8",
+    "morgan": "^1.6.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}

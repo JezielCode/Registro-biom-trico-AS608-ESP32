@@ -1,0 +1,76 @@
+html { background-color: #1D1D1D; }
+
+a, h1, h2, label { color: #80BD01; }
+
+a:hover { opacity: .75; }
+
+fieldset {
+    padding: 1rem;
+	border: medium solid #80BD01;
+	border-radius: 20px;
+}
+
+.logo {
+	display: block;
+	margin: 1rem auto;
+	width: 550px;
+	height: 200px;
+	
+	background: url("../img/nodejs-monitor.png") no-repeat center;
+	background-size: contain;
+}
+
+.welcome {
+	font-size: 2rem;
+	padding: 1rem;
+	background-color: #80BD01;
+	color: #FFF;
+	text-align: center;
+	border-radius: 20px;
+}
+.contact {
+
+	font-size: 1rem;
+	padding: 0.5rem;
+	background-color: #e0f8ad;
+	color: rgb(4, 3, 3);
+	text-align: center;
+	border-radius: 20px;
+	
+}
+
+
+.poster { max-width: 100px; }
+
+.table { width:100%; }
+
+.table td, .table th { padding: 1rem; }
+
+.table tr:first-child { 
+	background-color: #292623;
+	color: #80BD01; 
+}
+
+.table tr:nth-child(even) { background-color: #CCC; }
+
+.table tr:nth-child(odd):not(:first-child) { background-color: #EEE; }
+
+.button {
+    padding: .5rem 1rem;
+	color: #FFF;
+    background-color: #80BD01;
+	cursor: pointer;
+}
+
+.button:hover { opacity: .75; }
+
+.add { background-color: #0B0; }
+
+.edit { background-color: #0871B2; }
+
+.delete { background-color: #D23641; }
+
+.calculate { background-color: #5417e2; }
+
+
+

@@ -1,0 +1,45 @@
+extends layoutperfil
+
+block content
+  .main.container
+   p.lead.m-t-2 #{title}
+        -if(data.length)
+            table.table
+                tr
+                    th Id
+                    th Nombres
+                    th Apellidos
+                    th Telefono
+                    th Carnet
+                    th(colspan="4")
+                        form(method="GET" action="/perfil/getagregarEmpleados")
+                            input.button.add(type="submit", value="Agregar")
+                each users in data
+                    tr
+                        td #{users._id}
+                        td #{users.nombre}
+                        td #{users.apellidos}
+                        td #{users.telefono}
+                        td #{users.carnet}
+                        td
+                            form(method="GET" action="/perfil/geteditarempleado/"+ users._id)
+                                input.button.edit(type="submit", value="Editar")
+                        td  
+                            form(method="POST" action="/perfil/eliminarempleado/"+ users._id)
+                                input.button.delete(type="button", value="Eliminar" onclick="eliminar(this)")
+                        td
+                            form(method="POST" action="/esp8266/calcular/"+ users._id)
+                                input.button.calculate(type="submit", value="calcular")
+                        td
+                            form(method="POST" action="/esp8266/calcularpro/"+ users._id)
+                                input.button.calculate(type="submit", value="calcularPro")
+                script.
+                    function eliminar(input)
+                    {
+                        var deleteOk = confirm('¿Estás seguro de eliminar la película?')
+                        return (deleteOk) ? input.parentNode.submit() : false
+                    }
+        -else
+            form(method="GET" action="/perfil/getagregarEmpleados")
+                input.button.add(type="submit", value="Agregar")
+            p.error No existen ningun empleado registrado.

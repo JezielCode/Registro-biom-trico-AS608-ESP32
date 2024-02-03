@@ -1,0 +1,29 @@
+extends layoutperfil
+
+block content
+
+  .main.container
+   fieldset 
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-40 Editar usuario
+        form(method='POST' action='/perfil/posteditarempleado/'+ data._id)
+          div.form-group
+            label.item.i-b.v-top.ph3.p_25.right(for="horaentrada") ID
+            input.item.i-b.v-top.ph9.p_25#movie_id(type="text", name="elid", value=data._id, disabled, required)
+          div.form-group
+            label(for='horaentrada') Nombres
+            input.form-control(type="text", name="nombres_id", value=data.nombre, required)
+          div.form-group
+            label(for="horaentradamax") Apellidos
+            input.form-control(type="text", name="apellidos_id",  value=data.apellidos, required)
+          div.form-group
+            label(for="horasalida") Telefono
+            input.form-control(type="text", name="telefono_id",  value=data.telefono, required)
+          div.form-group
+            label(for="minentrada") Carnet
+            input.form-control(type="text", name="carnet_id",  value=data.carnet, required)
+          div.form-group
+            label(for="minSalida") Dirección
+            input.form-control(type="text", name="direccion_id",  value=data.direccion, required)
+          button.btn.btn-primary(type='submit') Guardar  

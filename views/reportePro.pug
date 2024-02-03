@@ -1,0 +1,22 @@
+extends layoutperfil
+
+block content
+  .main.container.clearfix
+    .row
+      .col-md-8.col-md-offset-2
+        h1.display-4
+          img.avatar.img-circle.hidden-xs-down(src='/images/avatar.png', alt='avatar')
+          | #{title}
+        p.favorite-book Plawyer Node V1.0
+            p.sd #{descripcion}
+            h2.sd #{Horastrabajo}
+            p2.sds #{count}
+            h2.sd #{descuento}
+            p4.sd #{descuento1}
+            h2.sd #{pagohora}
+            p6.sd #{pagohora1}
+            h2.sd #{resultado1}
+            p8.sd #{resultado2}
+              form(method='POST' action='/esp8266/descargarBasicoPro/'+ data._id)
+                button.btn.btn-primary(type='submit') Descargar reporte
+            

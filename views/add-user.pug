@@ -1,0 +1,26 @@
+extends layoutperfil
+
+block content
+
+  .main.container
+   fieldset 
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-25 Agregar empleado
+        form(method='POST' action='/perfil/postagregarEmpleados')
+          div.form-group
+            label(for='horaentrada') Nombres
+            input.form-control(type="text", name="nombres_id", required)
+          div.form-group
+            label(for="horaentradamax") Apellidos
+            input.form-control(type="text", name="apellidos_id", required)
+          div.form-group
+            label(for="horasalida") Telefono
+            input.form-control(type="text", name="telefono_id", required)
+          div.form-group
+            label(for="minentrada") Carnet
+            input.form-control(type="text", name="carnet_id",, required)
+          div.form-group
+            label(for="minSalida") Dirección
+            input.form-control(type="text", name="direccion_id", required)
+          button.btn.btn-primary(type='submit') Agregar 

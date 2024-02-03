@@ -1,0 +1,36 @@
+extends layoutperfil
+
+block content
+
+  .main.container
+   p.lead.m-t-2 #{title}
+   fieldset 
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-40 Configuración
+        form(method='POST' action='/perfil/configEmpleados')
+          div.form-group
+            label.item.i-b.v-top.ph3.p_25.right(for="horaentrada") ID
+            input.item.i-b.v-top.ph9.p_25#movie_id(type="text", name="elid", value=data._id, disabled, required)
+          div.form-group
+            label(for='horaentrada') Hora de entrada
+            input.form-control(type="text", name="horaentrada", value=data.horaentrada, required)
+          div.form-group
+            label(for="horaentradamax") Hora max de entrada
+            input.form-control(type="text", name="horaentradamax",  value=data.horaentradamax, required)
+          div.form-group
+            label(for="horasalida") Hora de salida
+            input.form-control(type="text", name="horasalida",  value=data.horasalida, required)
+          div.form-group
+            label(for="minentrada") Min Extras entrada
+            input.form-control(type="number", name="minentrada",  value=data.minentrada, required)
+          div.form-group
+            label(for="minSalida") Min extras salida
+            input.form-control(type="number", name="minSalida",  value=data.minSalida, required)
+          div.form-group
+            label(for="descuento") Descuento
+            input.form-control(type="number", name="descuento",  value=data.descuento, required)
+          div.form-group
+            label(for="pagohora") Pago por Hora
+            input.form-control(type="number", name="pagohora",  value=data.pagohora, required)
+          button.btn.btn-primary(type='submit') Guardar  
